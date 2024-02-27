@@ -2,11 +2,24 @@ Microservice Read Me
 
 Communication Contract:
 
-To programmatically REQUEST the data, the user must input "access" to the lock.txt file.
-For example:
-   with open("...lock.txt", "w") as file:
-        file.write("access")
+A) To programmatically REQUEST the data, the user must input "access" to the lock.txt file.
 
-To programmatically RECIEVE the data, the program must read what's inside the lock.txt file
-as the program will replace "access" to the mood that the user inputs.
+   For example:
+      with open("...lock.txt", "w") as file:
+           file.write("access")
+
+B) To programmatically RECIEVE the data, the program must read what's inside the lock.txt file
+   as the program will replace "access" to the mood that the user inputs.
+
+
+
+C) UML Sequence Design:
+   Diagram shown in "Screenshot 2024-02-26 at 5.46.54 PM.png"
+
+   Breif description:
+
+      1. The main program initiates the process by requesting data, inputting "access" into the lock.txt file.
+      2. The microservice reads the content of the lock.txt file.
+      3. The microservice processes the data and returns the mood, replacing "access" in the lock.txt file.
+      4. The user can then retrieve the mood from the lock.txt file.
 
