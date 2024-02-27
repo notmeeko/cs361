@@ -1,2 +1,12 @@
 Microservice Read Me
 
+Communication Contract:
+
+To programmatically REQUEST the data, the user must input "access" to the lock.txt file.
+For example:
+   with open("...lock.txt", "w") as file:
+        file.write("access")
+
+To programmatically RECIEVE the data, the program must read what's inside the lock.txt file
+as the program will replace "access" to the mood that the user inputs.
+
